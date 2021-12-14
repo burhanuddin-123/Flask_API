@@ -8,11 +8,6 @@ app = Flask(__name__)
 
 api = Api(app)
 
-# url = 'https://www.cricbuzz.com/cricket-series/'+info_date[i]+'/indian-premier-league-'+year[i]+'/matches'
-# page = requests.get(url)
-# soup = BeautifulSoup(page.content,"html.parser")
-# x = soup.find_all('div',class_='cb-col-75 cb-col')
-
 class Converter(Resource):
 	def get(self):
 		data = request.get_json()
