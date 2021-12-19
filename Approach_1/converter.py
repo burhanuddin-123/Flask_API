@@ -7,7 +7,10 @@ from urllib.error import URLError
 
 class Converter(Resource):
 	def get(self):
-		data = request.get_json()
+		# data = request.get_json()
+		data = request.args.get()
+		if not data:
+			return jsonify({"msg": "Pass the parameters"})
 		
 		# if both or one of the value is not there, except block will be called
 		try:
