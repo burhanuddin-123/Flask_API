@@ -11,7 +11,7 @@ app = Flask(__name__)
 # fetch connection strings
 uri = os.environ.get('DATABASE_URL', 'sqlite:///new_data.db')  # or other relevant config var
 if uri.startswith("postgres://"):
-    uri = uri.replace("postgres://", "postgresql://", 1)
+    uri = uri.replace("postgres://", "postgresql://", 1)  # postgres://xsnctxqhlhsrlt:2c2c0767bb12e63a7bfbfd6c126ef77fb9e572297384b6a2347f5407350ffba4@ec2-99-80-194-55.eu-west-1.compute.amazonaws.com:5432/dfo0ps1k403vu3
 # rest of connection code using the connection string `uri`
 
 app.config['SQLALCHEMY_DATABASE_URI'] = uri
