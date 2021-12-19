@@ -23,6 +23,4 @@ api.add_resource(Currency, '/currency')
 # api.add_resource(Converter, '/converter')
 
 if __name__ == '__main__':
-	from Approach_2.currency_model import db
-	db.init_app(app)
 	app.run(debug=True)
