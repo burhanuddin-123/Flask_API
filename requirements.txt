@@ -1,3 +1,5 @@
+uwsgi
+psycopg2
 aniso8601==9.0.1
 beautifulsoup4==4.10.0
 bs4==0.0.1
@@ -23,4 +25,3 @@ soupsieve==2.3.1
 SQLAlchemy==1.4.28
 urllib3==1.26.7
 Werkzeug==2.0.2
-psycopg2
