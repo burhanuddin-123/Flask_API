@@ -5,9 +5,10 @@ import json
 
 class Currency(Resource):
 	def get(self):
-		currency = Currency_Table.fetch_currecy()
+		currency = Currency_Table()
 		currency.save_to_db()
-		for values in currency:
+		currency_values = currency.fetch_currecy()
+		for values in currency_values:
 			final_list = [{
 			"USD": values.USD, "INR": values.INR, "EUR": values.EUR,
 			"GBP": values.GBP, "CNY": values.CNY, "JPY": values.JPY,
